@@ -1,0 +1,150 @@
+/* VARIABLES
+====================================================================*/
+
+$primaryColor: #b58636; // Links/Buttons
+$secondaryColor: #000000; // Headings
+// $terciaryColor: #f7ecc9; // Highlights
+
+$primaryColorLighten: lighten($primaryColor, 5);
+$primaryColorDarken: darken($primaryColor, 5);
+
+$white: #fff;
+$black: #111;
+$grey: #eee;
+
+//body
+$bodyBgColor: #ebebeb; // background of nav (mobile) and footer
+
+//rule
+$rule: #d8d8d6;
+
+// footer 
+$footerTextColor: #eee;
+
+/* VARIABLES
+====================================================================*/
+
+// Break Points
+@mixin bp($point) {
+	@if $point==small {
+		@media (min-width: 576px) {
+			@content;
+		}
+	}
+	@else if $point==medium {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+	@else if $point==large {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+	@else if $point==extra-large {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+// pixel to em function
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+/* STYLES
+====================================================================*/
+
+a, a:visited{
+	color: $primaryColor;
+}
+
+a:hover, a:focus, a:active{
+	color: $primaryColorDarken;
+}
+
+.submit, .submit:visited, .learnmore, .learnmore:visited, .readmore, .readmore:visited {
+	background: $primaryColor;
+	border: none;
+	color: $white;
+}
+
+.submit:hover, .submit:focus, .submit:active, .learnmore:hover, .learnmore:focus, .learnmore:active, .readmore:hover, .readmore:focus, .readmore:active {
+	background: $primaryColorDarken !important;
+	border: none;
+	color: $white;
+}
+
+.body-container {
+	background-color: $bodyBgColor;
+	overflow: hidden;
+}
+
+hr {
+	border-top: 1px solid $rule;
+}
+
+.c-fmg-divider {
+	height: 2px;
+	background: $rule;
+	border-bottom: 1px solid $white;
+}
+
+/** Top Bar **/
+@media only screen and (max-width: 460px) {
+	.top-bar a {
+		color: $primaryColor;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.top-bar .header-phone {
+		margin-top: 0;
+	}
+}
+
+/** Header **/
+header .moonlight-header-logo img {
+	width: 100%;
+}
+
+/** Hero **/
+#hero .heroOverlay {
+	height: 100%;
+	padding: 20px 0;
+}
+
+/** Navigation **/
+.angleDown{
+	display: inline-block;
+}
+
+@media only screen and (min-width: 769px) {
+	nav#main .container ul li a {
+		padding: 15px 20px;
+	}
+	nav#main .container ul li:hover .dropdown-menu{
+		top: 50px;
+	}
+	nav#main ul .dropdown-menu li a{
+		padding: 15px 15px 15px 20px !important;
+	}
+}
+
+/** Footer **/
+.footer-container {
+	color: $footerTextColor;
+}
+footer h4 {
+	text-decoration: none;
+	font-weight: 700;
+}
+footer a, .quickLinks ul a, footer .note a, footer .contact .moonlight-contact-information a{
+	color: $primaryColor;
+	text-decoration: none;
+}
+footer a:hover, .quickLinks ul a:hover{
+	color: $primaryColorDarken;
+}

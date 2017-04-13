@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en"> 
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head id="Head1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"65a1cfd223","applicationID":"17305203","transactionName":"b1JUYkBXX0BQUUFYClYYe2BxGXlcXFd2XgtMRVlaXlNDHHhcUVQd","queueTime":0,"applicationTime":2287,"ttGuid":"B48050EF6194729A","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+		
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<![endif]-->    
+		
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="generator" content="FMG Suite">
+
+		<title>Home | Company Name</title>
+		<meta name="robots" content="noindex, nofollow"/>
+
+		<!-- Hotjar -->
+		<script>
+			(function (f, b) {
+				var c;
+				f.hj = f.hj || function () { (f.hj.q = f.hj.q || []).push(arguments) };
+				f._hjSettings = { hjid: 36513, hjsv: 4 };
+				c = b.createElement("script"); c.async = 1;
+				c.src = "//static.hotjar.com/c/hotjar-" + f._hjSettings.hjid + ".js?sv=" + f._hjSettings.hjsv;
+				b.getElementsByTagName("head")[0].appendChild(c);
+			})(window, document);
+		</script>
+
+		<!-- Global stylesheet -->
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/global/css/global.css?v=2.8.4">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css">
+
+		<!-- FontAwesome core CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" />
+
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/006/css/overrides.css?v=2.8.4" type="text/css">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700" type="text/css" />
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/006/css/6.css?v=2.8.4" type="text/css">
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/006/css/6a.css?v=2.8.4" type="text/css">
+
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/advanced-sections/advancedsections.css?v=2.8.4" type="text/css">
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/shared/css/fmg-awesomplete.css?v=2.8.4" type="text/css">
+		
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/006/css/6ac.css?v=2.8.4" type="text/css">
+		<link rel="stylesheet" href="http://www.fmgwebsites.com/520476fe-4b2c-4eb8-a7df-922640ff715d/css/custom/customtheme.css?r=1830287112" type="text/css">
+
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/fancybox/2.1.5/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/fancybox/2.1.5/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+		<link rel="stylesheet" href="https://s3.amazonaws.com/static.contentres.com/site/templates/fancybox/2.1.5/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+
+		<!-- ADVANCED HEAD -->
+		<!-- @include html/advanced-head-v01.html -->
+		<!-- END ADVANCED HEAD -->
+
+		<!--[if lt IE 9]>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/shared/scripts/html5shiv.min.js"></script>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/shared/scripts/html5shiv-printshiv.min.js"></script>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/shared/scripts/respond.js"></script>   
+		<link rel="stylesheet" href="http://static.contentres.com/site/templates/bootstrap/3.3.4/css/bootstrap-disable-responsive.css?v=2.26.6" type="text/css">  
+		<![endif]-->
+	</head>
+
+	<body class="homepage">
+		<script>
+			var addthis_config = {
+				"data_track_clickback": true,
+				services_compact: 'email, facebook, twitter, more',
+				services_exclude: 'print'
+			}
+		</script>
+		<script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dac6baa77f4cfd0"></script>
+
+		<div style="background: #900; color: #fff !important; padding: 3px 5px; font-size: 12px; text-align: center; position: fixed; left: 0; bottom: 0; z-index: 999; opacity: .75;">
+			<a style="color: #fff;" href="http://www.fmgwebsites.com/38e88217-05a5-486d-8f60-f2248e758870/" title="Click to view live site">You are viewing a preview location.</a>
+		</div>
+
+		<a class="back-to-top" href="#top"><i class="icon-angle-up"><i class="fa fa-angle-up"></i></i></a>
+
+		<div class="floating-broker-check">
+			<a href="http://brokercheck.finra.org/" target="_blank">
+				<img src="http://static.contentres.com/site/templates/global/img/brokerCheck-bar-logo.png" alt="Broker Check" />
+			</a>
+		</div>
+
+		<!-- Top Bar -->
+		<div class="top-bar">
+			<div class="container">
+				<div class="col-xs-12 col-sm-6 col-md-6 social-wrapper">
+					<section class="social-media">
+
+						<a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a class="linkedin" href="http://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a class="youtube" href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+						<a class="facebook" href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+
+					</section>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<section class="header-phone">
+						<p><a href="tel:1234567890"><i class="fa fa-phone"></i>123-456-7890</a></p>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<header class="header">
+
+			<div class="container">
+				<div class="row">
+					<div class="moonlight-header-logo col-sm-12 col-md-3">
+						<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/">
+
+							<!-- LOGO -->
+							<img src="http://static.contentres.com/site/templates/006/img/logo_placeholder.png" class="img-responsive" />
+							<!-- END LOGO -->
+
+						</a>
+					</div>
+					<nav id="main" class="navbar navbar-default navbar-fixed-top nav-down">
+						<div class="container container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle">
+									<span class="sr-only">Menu</span>
+									<span class="icon-bar top"></span>
+									<span class="icon-bar center"></span>
+									<span class="icon-bar bottom"></span>
+								</button>
+							</div>
+							<div id="navbar" class="off-canvas">
+								<ul class="nav navbar-nav">
+									<li><a href="#"><span>Home</span></a></li>
+									<li class="dropdown"><a href="#" class="" role="button" aria-expanded="false"><span>About</span></a><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" target="_self"><span><span class="subnavButton" alt="Navigation">&nbsp;</span><span class='angleDown angleLeft'></span><span class='angleDown angleRight'></span></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Blog</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><a href="#" class="" role="button" aria-expanded="false"><span>Resource Center</span></a><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" target="_self"><span><span class="subnavButton" alt="Navigation">&nbsp;</span><span class='angleDown angleLeft'></span><span class='angleDown angleRight'></span></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Retirement</a></li>
+											<li><a href="#">Estate</a></li>
+											<li><a href="#">Investment</a></li>
+											<li><a href="#">Insurance</a></li>
+											<li><a href="#">Tax</a></li>
+											<li><a href="#">Money</a></li>
+											<li><a href="#">Lifestyle</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><a href="#" class="" role="button" aria-expanded="false"><span>Tools</span></a><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" target="_self"><span><span class="subnavButton" alt="Navigation">&nbsp;</span><span class='angleDown angleLeft'></span><span class='angleDown angleRight'></span></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Glossary</a></li>
+											<li><a href="#">Tax Resources</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><a href="#" class="" role="button" aria-expanded="false"><span>Contact</span></a></li>
+								</ul>
+							</div>
+
+							<!--/.navbar-collapse -->
+						</div>
+					</nav>
+				</div>
+
+			</div>
+
+		</header>
+
+
+		<!-- Hero Rotator -->
+		<div class="hero-container hidden-print">
+
+			<section id="hero" class="defaultHero heroBackground">
+				<div class="heroOverlay">
+					<section class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-7 heroImages">
+
+								<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/retirement/how-to-bake-a-roth-piera" id="hero1" class="asset-393 selected"><img src="http://static.contentres.com/site/templates/global/img/assets/393-hero.jpg" class="img-responsive hero asset-393" /></a>
+
+								<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/lifestyle/forecast-video" id="hero2" class="asset-398"><img src="http://static.contentres.com/site/templates/global/img/assets/398-hero.jpg" class="img-responsive hero asset-398" /></a>
+
+								<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/retirement/retirement-redefined" id="hero3" class="asset-387"><img src="http://static.contentres.com/site/templates/global/img/assets/387-hero.jpg" class="img-responsive hero asset-387" /></a>
+
+								<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/lifestyle/acres-of-diamonds" id="hero4" class="asset-251"><img src="http://static.contentres.com/site/templates/global/img/assets/251-hero.jpg" class="img-responsive hero asset-251" /></a>
+
+							</div>
+							<aside class="col-xs-12 col-sm-12 col-md-5 heroDesc">
+
+								<div id="hero1_wrapper" class="wrapper selected asset-393">
+									<h2>How to Bake a Pie-R-A</h2>
+									<p>Roth IRAs are tax advantaged in a different way from traditional IRAs.</p>
+									<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/retirement/how-to-bake-a-roth-piera" class="learnmore">Learn More</a>
+								</div>
+
+								<div id="hero2_wrapper" class="wrapper asset-398">
+									<h2>Forecast</h2>
+									<p>The market is as unpredictable as the weather. We’d love to help you prepare.</p>
+									<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/lifestyle/forecast-video" class="learnmore">Learn More</a>
+								</div>
+
+								<div id="hero3_wrapper" class="wrapper asset-387">
+									<h2>Retirement Redefined</h2>
+									<p>Around the country, attitudes about retirement are shifting.</p>
+									<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/retirement/retirement-redefined" class="learnmore">Learn More</a>
+								</div>
+
+								<div id="hero4_wrapper" class="wrapper asset-251">
+									<h2>Acres of Diamonds</h2>
+									<p>In life it often happens that the answers to our most pressing questions are right in our own backyards.</p>
+									<a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/lifestyle/acres-of-diamonds" class="learnmore">Learn More</a>
+								</div>
+
+							</aside>
+						</div>
+					</section>
+					<a href="#" id="previousHero" class="backArrow"><i class="fa fa-angle-left"></i></a>
+					<a href="#" id="nextHero" class="forwardArrow"><i class="fa fa-angle-right"></i></a>
+				</div>
+			</section>
+		</div>
+
+		<!-- Main Body -->
+		<div class="body-container">
+
+			<section id="content">
+
+				<section id="section_0" class="section section_FullWidth  None None  ">
+					<div class="overlay">
+						<div class="container" style=''>
+							<div class="welcome col-xs-12 col-sm-12 col-md-12">
+
+								<!-- MAIN HOMEPAGE SECTION -->
+								<!-- @include html/home-v01.html -->
+								<!-- END MAIN HOMEPAGE SECTION -->
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="section_1" class="section section_SideBySide Right None None  ">
+					<div class="overlay">
+						<div class="container" style=''>
+							<div class="col-sm-12 col-md-12 sidebyside-wrapper None">
+								<div id="box1-image" class="col-xs-12 col-sm-6 col-md-6 aside_image box SideBySide  col-sm-push-6 col-md-push-6 ">
+									<div class="Rectangle wrap">
+										<div class="crop"><img src="http://static.contentres.com/media/customSection/sidebyside.jpg" class="img-responsive" /></div>
+									</div>
+								</div>
+								<div id="box1-text" class="col-xs-12 col-sm-6 col-md-6 box aside_text col-sm-pull-6 col-md-pull-6">
+									<h2>Client Centered</h2>
+									<div>
+										<p>Without any conflicts of interest we put your needs first.</p>
+									</div>
+									<a href="#" class="sxsBtn learnmore  " style="">
+										<span class="button">Learn more</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="section_2" class="section section_Boxes  None None  ">
+					<div class="overlay">
+						<div class="container" style=''>
+							<div id="box1" class="col-xs-12 col-sm-4 col-md-4 box Image  None">
+								<a href="#">
+									<img src="http://static.contentres.com/media/customSection/services.jpg" class="img-responsive" style="margin: 0 auto" />
+								</a>
+								<h2>Services</h2>
+								<div class="box-paragraph">
+									<p>We create strategies tailored to your goals.</p>
+								</div>
+								<a href="#" class="threeBoxBtn learnmore  " style="">
+									<span class="button">Learn more</span>
+								</a>
+							</div>
+							<div id="box2" class="col-xs-12 col-sm-4 col-md-4 box Image  None">
+								<a href="#">
+									<img src="http://static.contentres.com/media/customSection/independence.jpg" class="img-responsive" style="margin: 0 auto" />
+								</a>
+								<h2>Independence</h2>
+								<div class="box-paragraph">
+									<p>Without any conflicts of interest we put your needs first.</p>
+								</div>
+								<a href="#" class="threeBoxBtn learnmore  " style="">
+									<span class="button">Learn more</span>
+								</a>
+							</div>
+							<div id="box3" class="col-xs-12 col-sm-4 col-md-4 box Image  None">
+								<a href="#">
+									<img src="http://static.contentres.com/media/customSection/trust.jpg" class="img-responsive" style="margin: 0 auto" />
+								</a>
+								<h2>Trust</h2>
+								<div class="box-paragraph">
+									<p>We enjoy building trusted relationships that span generations.</p>
+								</div>
+								<a href="#" class="threeBoxBtn learnmore  " style="">
+									<span class="button">Learn more</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<div class="footer-container">
+			<footer>
+				<section class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-3">
+							<section class="contact">
+								<h4>Contact</h4>
+								<div class="moonlight-contact-information">
+									<p class="moonlight-phone">Office:&nbsp;123-456-7890</p>
+									<p class="moonlight-fax">Fax: 123-456-7890</p>
+
+									<div class="moonlight-address_block">
+										<p class="moonlight-address1">123 Main St.</p>
+										<span class="moonlight-city">City,</span> <span class="moonlight-region">ST</span> <span class="moonlight-postalcode">12345</span>
+									</div>
+
+									<p><a href="mailto:info@company.com">info@company.com</a></p>
+
+								</div>
+
+								<section class="socialMedia">
+
+									<a href="http://www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+									<a href="http://www.twitter.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+									<a href="http://www.linkedin.com" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+									<a href="http://www.youtube.com" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a>
+
+								</section>
+							</section>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-2">
+							<section class="quickLinks">
+								<h4>Quick Links</h4>
+								<ul>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/retirement">Retirement</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/investment">Investment</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/estate">Estate</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/insurance">Insurance</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/tax">Tax</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/money">Money</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/lifestyle">Lifestyle</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/articles">All Articles</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/videos">All Videos</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/calculators">All Calculators</a></li>
+									<li><a href="http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/resource-center/presentations">All Presentations</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-7">
+							<section class="note">
+								<p class="boker-check-disclaimer">Check the background of your financial professional on FINRA's <a href="http://brokercheck.finra.org/" target="_blank">BrokerCheck</a></p>
+								<p class="globalDisclosure">The content is developed from sources believed to be providing accurate information. The information in this material is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation. Some of this material was developed and produced by FMG Suite to provide information on a topic that may be of interest. FMG Suite is not affiliated with the named representative, broker-dealer, state- or SEC-registered investment advisory firm. The opinions expressed and material provided are for general information, and should not be considered a solicitation for the purchase or sale of any security.</p>
+								<p class="globalCopyright">Copyright 2017 FMG Suite.</p>
+								<p class="globalDisclaimer"></p>
+								<!-- @include html/disclaimer-v01.html -->
+							</section>
+						</div>
+					</div>
+					<div class="rule2">&#160;</div>
+				</section>
+			</footer>
+		</div>
+		<!-- /container -->
+
+
+		<!-- Bootstrap core JavaScript and Plugins
+	================================================== -->
+		<script type="text/javascript" src="/scripts/MicrosoftAjax.js"></script>
+		<script type="text/javascript" src="/scripts/MicrosoftMVCAjax.js"></script>
+		<script type="text/javascript" src="/scripts/MicrosoftMVCValidation.js"></script>
+
+		<script src="http://static.contentres.com/site/templates/modernizr/2.8.3/js/modernizr.custom.12650.js"></script>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/jquery-migrate-1.2.1.min.js?v=2.26.6"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="http://static.contentres.com/site/templates/shared/scripts/template006.js"></script>
+		<script src="http://static.contentres.com/site/templates/shared/scripts/jquery.validate.js"></script>
+		<script src="http://static.contentres.com/site/templates/shared/scripts/jquery.stellar.js"></script>
+		<script type="text/javascript" src="http://fmg-websites-custom.s3.amazonaws.com/js/video-scroll-play.js"></script>
+
+		<!-- ADVANCED FOOTER -->
+		<!-- @include html/advanced-footer-v01.html -->
+		<!-- END ADVANCED FOOTER -->
+
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/fancybox/2.1.5/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/fancybox/2.1.5/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/fancybox/2.1.5/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/fancybox/2.1.5/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/fancybox/2.1.5/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/global.js?v=2.26.6"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/contact.js?v=2.26.6"></script>
+
+		<!--[if gt IE 8]><!-->
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
+		<script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/index.market.js?v=2.26.6"></script>
+		<!--<![endif]-->
+
+		<!--[if lt IE 9]>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/global/js/excanvas.min.js?v=2.26.6")></script>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/shared/scripts/jquery.flot-0.8.3.js?v=2.26.6")></script>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/shared/scripts/jquery.flot.time.min.js?v=2.26.6")></script>
+		<script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/global/js/index.market.ie.js?v=2.26.6")></script>
+		<![endif]-->
+
+		<script src="http://static.contentres.com/site/templates/global/js/index.js?v=2.26.6"></script>
+
+		<script type="text/javascript">
+			var FMG = {
+				"RootLocation": "http://www.fmgwebsites.com/00cd2397-ea33-472c-91c5-2726bf590cec/",
+				"SecureLocation": "https://www.fmgwebsites.com/38e88217-05a5-486d-8f60-f2248e758870/",
+				"LeavingSiteDisclaimer": null,
+				"PartyPublicIdentifier": "350746"
+			};
+		</script>
+
+		<script type="text/javascript">
+			$.validator.methods.email = function(value, element) {
+				return this.optional(element) || /^[\w\.=-]+@[\w\.-]+\.[\w]{2,10}$/.test(value);
+			}
+		</script>
+
+	</body>
+</html>
+
